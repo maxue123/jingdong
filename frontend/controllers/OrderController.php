@@ -1,0 +1,16 @@
+<?php
+namespace frontend\controllers;
+use Yii;
+use yii\web\Controller;
+/**
+ * Index controller
+ * 商品分页
+ */
+class OrderController extends Controller
+{
+	public $layout = false;
+	public function actionCheck()
+    {
+        return $this->render('check');
+    }
+}
