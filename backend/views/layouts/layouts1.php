@@ -6,21 +6,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
     <!-- bootstrap -->
-    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
-    <link href="css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+    <link href="assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
 
     <!-- libraries -->
-    <link href="css/lib/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css" />
-    <link href="css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
+    <link href="assets/css/lib/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
 
     <!-- global styles -->
-    <link rel="stylesheet" type="text/css" href="css/layout.css" />
-    <link rel="stylesheet" type="text/css" href="css/elements.css" />
-    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/elements.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/icons.css" />
 
     <!-- this page specific styles -->
-    <link rel="stylesheet" href="css/compiled/index.css" type="text/css" media="screen" />    
+    <link rel="stylesheet" href="assets/css/compiled/index.css" type="text/css" media="screen" />    
 
     <!-- open sans font -->
     <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
@@ -100,7 +100,7 @@
                             <a href="#" class="close-icon"><i class="icon-remove-sign"></i></a>
                             <div class="messages">
                                 <a href="#" class="item">
-                                    <img src="img/contact-img.png" class="display" />
+                                    <img src="assets/img/contact-img.png" class="display" />
                                     <div class="name">Alejandra Galván</div>
                                     <div class="msg">
                                         There are many variations of available, but the majority have suffered alterations.
@@ -108,7 +108,7 @@
                                     <span class="time"><i class="icon-time"></i> 13 min.</span>
                                 </a>
                                 <a href="#" class="item">
-                                    <img src="img/contact-img2.png" class="display" />
+                                    <img src="assets/img/contact-img2.png" class="display" />
                                     <div class="name">Alejandra Galván</div>
                                     <div class="msg">
                                         There are many variations of available, have suffered alterations.
@@ -116,7 +116,7 @@
                                     <span class="time"><i class="icon-time"></i> 26 min.</span>
                                 </a>
                                 <a href="#" class="item last">
-                                    <img src="img/contact-img.png" class="display" />
+                                    <img src="assets/img/contact-img.png" class="display" />
                                     <div class="name">Alejandra Galván</div>
                                     <div class="msg">
                                         There are many variations of available, but the majority have suffered alterations.
@@ -229,16 +229,16 @@
     <!-- end sidebar -->
     <?php echo $content ?>
     <!-- scripts -->
-    <script src="js/jquery-latest.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-ui-1.10.2.custom.min.js"></script>
+    <script src="assets/js/jquery-latest.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-ui-1.10.2.custom.min.js"></script>
     <!-- knob -->
-    <script src="js/jquery.knob.js"></script>
+    <script src="assets/js/jquery.knob.js"></script>
     <!-- flot charts -->
-    <script src="js/jquery.flot.js"></script>
-    <script src="js/jquery.flot.stack.js"></script>
-    <script src="js/jquery.flot.resize.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="assets/js/jquery.flot.js"></script>
+    <script src="assets/js/jquery.flot.stack.js"></script>
+    <script src="assets/js/jquery.flot.resize.js"></script>
+    <script src="assets/js/theme.js"></script>
 
     <script type="text/javascript">
         $(function () {

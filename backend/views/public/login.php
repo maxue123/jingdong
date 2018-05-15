@@ -6,20 +6,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
     <!-- bootstrap -->
-    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
-    <link href="css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+    <link href="assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
 
     <!-- global styles -->
-    <link rel="stylesheet" type="text/css" href="css/layout.css" />
-    <link rel="stylesheet" type="text/css" href="css/elements.css" />
-    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/elements.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/icons.css" />
 
     <!-- libraries -->
-    <link rel="stylesheet" type="text/css" href="css/lib/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/lib/font-awesome.css" />
     
     <!-- this page specific styles -->
-    <link rel="stylesheet" href="css/compiled/signin.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="assets/css/compiled/signin.css" type="text/css" media="screen" />
 
     <!-- open sans font -->
     <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
@@ -53,9 +53,9 @@
     </div>
 
 	<!-- scripts -->
-    <script src="js/jquery-latest.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="assets/js/jquery-latest.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/theme.js"></script>
 
     <!-- pre load bg imgs -->
     <script type="text/javascript">
@@ -68,7 +68,7 @@
                 $(this).addClass("active");
                 var bg = $(this).data("img");
 
-                $("html").css("background-image", "url('img/bgs/" + bg + "')");
+                $("html").css("background-image", "url('assets/img/bgs/" + bg + "')");
             });
 
         });
