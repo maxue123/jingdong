@@ -8,9 +8,9 @@ use yii\web\Controller;
  */
 class PublicController extends Controller
 {
-	public $layout = false;
     public function actionLogin()
     {
+    	$this->layout = false;
         return $this->render('login');
     }
 }
