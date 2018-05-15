@@ -8,6 +8,7 @@ use yii\web\Controller;
  */
 class PublicController extends Controller
 {
+	public $layout = false;
     public function actionLogin()
     {
         return $this->render('login');
