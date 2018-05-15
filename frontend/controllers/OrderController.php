@@ -14,7 +14,7 @@ class OrderController extends Controller
 	}
 	public function actionCheck()
     {
-    	public $layout = "layouts1";
+    	$this->layout = "layouts1";
         return $this->render('check');
     }
 }
