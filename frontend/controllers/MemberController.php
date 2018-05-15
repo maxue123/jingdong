@@ -8,7 +8,7 @@ use yii\web\Controller;
  */
 class MemberController extends Controller
 {
-	public $layout = false;
+	public $layout = "layouts2";
 	public function actionAuth()
     {
         return $this->render('auth');

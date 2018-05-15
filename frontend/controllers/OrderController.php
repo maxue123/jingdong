@@ -8,8 +8,8 @@ use yii\web\Controller;
  */
 class OrderController extends Controller
 {
-	public $layout = false;
 	public function actionIndex(){
+		public $layout = "layouts2";
 		return $this->render('index');
 	}
 	public function actionCheck()
