@@ -9,7 +9,7 @@ use yii\web\Controller;
 class OrderController extends Controller
 {
 	public function actionIndex(){
-		public $layout = "layouts2";
+		$this->layout = "layouts2";
 		return $this->render('index');
 	}
 	public function actionCheck()

@@ -8,7 +8,7 @@ use yii\web\Controller;
  */
 class ProductController extends Controller
 {
-	public $layout = false;
+	public $layout = "layouts2";
     public function actionIndex()
     {
         return $this->render('index');
