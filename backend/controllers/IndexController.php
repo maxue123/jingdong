@@ -8,8 +8,9 @@ use yii\web\Controller;
  */
 class IndexController extends Controller
 {
+	public $layout = "layouts1";
     public function actionIndex()
     {
-        return $this->renderPartial('index');
+        return $this->render('index');
     }
 }
