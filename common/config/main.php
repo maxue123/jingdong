@@ -12,7 +12,7 @@
 //     ],
 // ];
 return [ 
-'defaultRoute' = 'index';
+'defaultRoute' = 'index',
 'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
