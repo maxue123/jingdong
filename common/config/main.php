@@ -25,7 +25,7 @@ return [
 'modules' => [ 
     'gii' => [ 
         'class' => 'yii\gii\Module', 
-        'allowedIPs' => ['::1','127.0.0.1','192.168.0.222'], //只允许本地访问gii 
+        'allowedIPs' => ['::1','127.0.0.1','192.168.0.222','192.168.0.1','192.168.0.101'], //只允许本地访问gii 
         'generators'=> [ 
             'module'=> [ 
             'class' => 'yii\gii\generators\module\Generator', 
