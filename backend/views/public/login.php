@@ -38,8 +38,8 @@ use yii\bootstrap\ActiveForm;
         <div class="span4 box">
             <div class="content-wrap">
                 <h6>慕课商城 - 后台管理</h6>
-                <input class="span12" type="text" placeholder="管理员账号" />
-                <input class="span12" type="password" placeholder="管理员密码" />
+                <?php echo $form->field($model,'adminuser')->textInput(["class"=>"span12","placeholder"=>"管理员账号"]); ?>
+                <?php echo $form->field($model,'adminuser')->passwordInput(["class"=>"span12","placeholder"=>"管理员账号"]); ?>
                 <a href="#" class="forgot">忘记密码?</a>
                 <div class="remember">
                     <input id="remember-me" type="checkbox" />
