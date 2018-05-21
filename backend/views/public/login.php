@@ -50,7 +50,7 @@ use yii\helpers\Html;
                     'id'=>'remember-me',
                     'template'=>'<div class="remember">{input}<label for="remember-me">记住我</label></div>'
                 ]); ?>
-                <?php echo Html::submitButton('登录',[class=>"btn-glow primary login"]);?>
+                <?php echo Html::submitButton('登录',["class"=>"btn-glow primary login"]);?>
             </div>
         </div>
         <?php $form = ActiveForm::end(); ?>
