@@ -1,3 +1,6 @@
+<?php 
+use yii\bootstrap\ActiveForm;  
+?>
 <!DOCTYPE html>
 <html class="login-bg">
 <head>
@@ -31,7 +34,7 @@
 <body>
     <div class="row-fluid login-wrapper">
         <a class="brand" href="index.html"></a>
-
+        <?php $form = ActiveForm::begin(); ?>
         <div class="span4 box">
             <div class="content-wrap">
                 <h6>慕课商城 - 后台管理</h6>
@@ -45,7 +48,7 @@
                 <a class="btn-glow primary login" href="index.html">登录</a>
             </div>
         </div>
-
+        <?php $form = ActiveForm::end(); ?>
         <div class="span4 no-account">
             <p>没有账户?</p>
             <a href="signup.html">注册</a>
