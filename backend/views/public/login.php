@@ -1,5 +1,6 @@
 <?php 
-use yii\bootstrap\ActiveForm;  
+use yii\bootstrap\ActiveForm; 
+use yii\helpers\Html; 
 ?>
 <!DOCTYPE html>
 <html class="login-bg">
@@ -34,32 +35,30 @@ use yii\bootstrap\ActiveForm;
 <body>
     <div class="row-fluid login-wrapper">
         <a class="brand" href="index.html"></a>
-        <?php $form = ActiveForm::begin(); ?>
+        <?php $form = ActiveForm::begin([
+            'fieldConfig'=>[
+                'template'=>'{input}'
+            ]
+        ]); ?>
         <div class="span4 box">
             <div class="content-wrap">
                 <h6>慕课商城 - 后台管理</h6>
                 <?php echo $form->field($model,'adminuser')->textInput(["class"=>"span12","placeholder"=>"管理员账号"]); ?>
-                <?php echo $form->field($model,'adminuser')->passwordInput(["class"=>"span12","placeholder"=>"管理员账号"]); ?>
+                <?php echo $form->field($model,'adminpass')->passwordInput(["class"=>"span12","placeholder"=>"管理员账号"]); ?>
                 <a href="#" class="forgot">忘记密码?</a>
-                <div class="remember">
-                    <input id="remember-me" type="checkbox" />
-                    <label for="remember-me">记住我</label>
-                </div>
-                <a class="btn-glow primary login" href="index.html">登录</a>
+                <?php echo $form->field($model,'rememberMe')->checkbox([
+                    'id'=>'remember-me',
+                    'template'=>'<div class="remember">{input}<label for="remember-me">记住我</label></div>'
+                ]); ?>
+                <?php echo Html::submitButton('登录',[class=>"btn-glow primary login"]);?>
             </div>
         </div>
         <?php $form = ActiveForm::end(); ?>
-        <div class="span4 no-account">
-            <p>没有账户?</p>
-            <a href="signup.html">注册</a>
-        </div>
     </div>
-
 	<!-- scripts -->
     <script src="assets/js/jquery-latest.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/theme.js"></script>
-
     <!-- pre load bg imgs -->
     <script type="text/javascript">
         $(function () {
