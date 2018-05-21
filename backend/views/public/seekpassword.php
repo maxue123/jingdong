@@ -43,15 +43,15 @@ use yii\helpers\Url;
         ]); ?>
         <div class="span4 box">
             <div class="content-wrap">
-                <h6>慕课商城 - 后台管理</h6>
+                <h6>慕课商城 - 找回密码</h6>
+                <?php if(Yii::$app->session->hasFlash('info')){
+                    echo Yii::$app->session->getFlash('info');
+                    }?>
                 <?php echo $form->field($model,'adminuser')->textInput(["class"=>"span12","placeholder"=>"管理员账号"]); ?>
-                <?php echo $form->field($model,'adminpass')->passwordInput(["class"=>"span12","placeholder"=>"管理员账号"]); ?>
-                <a href="<?php echo Url::to(['public/seekpassword']) ?>" class="forgot">忘记密码?</a>
-                <?php echo $form->field($model,'rememberMe')->checkbox([
-                    'id'=>'remember-me',
-                    'template'=>'<div class="remember">{input}<label for="remember-me">记住我</label></div>'
-                ]); ?>
-                <?php echo Html::submitButton('登录',["class"=>"btn-glow primary login"]);?>
+                <?php echo $form->field($model,'adminemail')->textInput(["class"=>"span12","placeholder"=>"管理员邮箱"]); ?>
+                
+                <a href="<?php echo Url::to(['public/login']) ?>" class="forgot">返回登录?</a>
+                <?php echo Html::submitButton('找回密码',["class"=>"btn-glow primary login"]);?>
             </div>
         </div>
         <?php $form = ActiveForm::end(); ?>
