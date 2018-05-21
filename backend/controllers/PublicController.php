@@ -12,6 +12,7 @@ class PublicController extends Controller
     public function actionLogin()
     {
     	$this->layout = false;
+    	var_dump('1111111');die;
     	$model = new Admin;
         return $this->render('login',['model' => $model]);
     }
