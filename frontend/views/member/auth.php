@@ -1,4 +1,7 @@
-
+<?php
+    use yii\bootstrap\ActiveForm;
+    use yii\helpers\Html;
+?>
 <!-- ============================================================= HEADER : END ============================================================= -->		<!-- ========================================= MAIN ========================================= -->
 <main id="authentication" class="inner-bottom-md">
 	<div class="container">
@@ -19,7 +22,6 @@
 							</div>
 						</div>
 					</div>
-
 					<form role="form" class="login-form cf-style-1">
 						<div class="field-row">
                             <label>电子邮件</label>
@@ -52,18 +54,24 @@
 				<section class="section register inner-left-xs">
 					<h2 class="bordered">建立新帐户</h2>
 					<p>创建您自己的Media Center帐户</p>
-
-					<form role="form" class="register-form cf-style-1">
-						<div class="field-row">
-                            <label>电子邮件</label>
-                            <input type="text" class="le-input">
-                        </div><!-- /.field-row -->
-
-                        <div class="buttons-holder">
-                            <button type="submit" class="le-button huge">Sign Up</button>
-                        </div><!-- /.buttons-holder -->
-					</form>
-
+					<?php
+					    if (Yii::$app->session->hasFlash('info')) {
+					        echo Yii::$app->session->getFlash('info');
+					    }
+					    $form = ActiveForm::begin([
+					        'options' => ['class' => 'register-form cf-style-1','role' => 'form',],
+					        'fieldConfig' => [
+					            'template' => '<div class="field-row">{label}{input}</div>{error}'
+					        ],
+					        'action' => ['member/reg'],
+					    ]);
+					?>
+					<?php echo $form->field($model, 'useremail')->textInput(['class' => 'le-input']); ?>
+					<div class="buttons-holder">
+					    <?php echo Html::submitButton('注册', ['class' => 'le-button huge']); ?>
+					</div>
+					<?php ActiveForm::end(); ?>
+					
 					<h2 class="semi-bold">今天注册并且您将能够：</h2>
 
 					<ul class="list-unstyled list-benefits">

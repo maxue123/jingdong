@@ -1,3 +1,6 @@
+<?php 
+use yii\helpers\Url;
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -118,8 +121,7 @@
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dollar (US)</a></li>
                     </ul>
                 </li>
-                <li><a href="authentication.html">Register</a></li>
-                <li><a href="authentication.html">Login</a></li>
+                <li><a href="<?php echo Url::to(['member/auth']); ?>">注册/登录</a></li>
             </ul>
         </div><!-- /.col -->
     </div><!-- /.container -->
