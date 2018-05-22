@@ -19,7 +19,7 @@ class ManageController extends Controller
     	$model = Admin::find();
     	$count = $model->count();
     	$pageSize = Yii::$app->params['pageSize']['manage'];
-    	$pager = new pagination(['totalCount'=>$count,'pageSize' => $pageSize]);
+    	$pager = new Pagination(['totalCount'=>$count,'pageSize' => $pageSize]);
     	$managers = $model->offset($pager->offset)->limit($pager->limit)->all();
     	return $this->render('managers',['managers'=>$managers,'pager'=>$pager]);
     }
