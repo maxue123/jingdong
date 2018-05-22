@@ -34,7 +34,7 @@
 		<!-- Demo Purpose Only. Should be removed in production : END -->
 
 	    <!-- Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+		<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'> -->
 		
 		<!-- Icons/Glyphs -->
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -690,7 +690,7 @@
     <script src="assets/js/jquery-1.10.2.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+   <!--  <script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script> -->
     <script src="assets/js/gmap3.min.js"></script>
     <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>

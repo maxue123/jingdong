@@ -48,4 +48,27 @@ class ManageController extends Controller
             $this->redirect(['manage/managers']);
         }
     }
+    public function actionChangeemail(){
+        $model = Admin::find()->where('adminuser = :user ',[":user" => Yii::$app->session['admin']['adminuser']])->one();
+        if(Yii::$app->request->isPost){
+            $post = Yii::$app->request->post();
+            if($model->changeemail($post)){
+                Yii::$app->session->setFlash('info','邮箱修改成功');
+            }      
+        }
+        $model->adminpass = "";
+        return $this->render('changeemail',['model'=>$model]);
+    }
+    public function actionChangepass(){
+        $model = Admin::find()->where('adminuser = :user ',[":user" => Yii::$app->session['admin']['adminuser']])->one();
+        if(Yii::$app->request->isPost){
+            $post = Yii::$app->request->post();
+            if($model->changepass($post)){
+                Yii::$app->session->setFlash('info','密码修改成功');
+            }      
+        }
+        $model->adminpass = "";
+        $model->repass = "";
+        return $this->render('changepass',['model'=>$model]);
+    }
 }
