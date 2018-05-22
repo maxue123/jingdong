@@ -1,3 +1,6 @@
+<?php 
+use yii\helpers\Url;
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -147,7 +150,7 @@
                     </a>
                 </li>
                 <li class="settings hidden-phone">
-                    <a href="<?php echo yii\helpers\Url::to(['public/logout']); ?>" role="button">
+                    <a href="<?php echo Url::to(['public/logout']); ?>" role="button">
                         <i class="icon-share-alt"></i>
                     </a>
                 </li>
@@ -185,6 +188,17 @@
                     <li><a href="user-list.html">用户列表</a></li>
                     <li><a href="new-user.html">加入新用户</a></li>
                     <li><a href="user-profile.html">用户信息</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-user"></i>
+                    <span>管理员管理</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="<?php echo Url::to(['manage/managers']); ?>">管理员列表</a></li>
+                    <li><a href="<?php echo Url::to(['manage/reg']); ?>">加入管理员</a></li>
                 </ul>
             </li>
             <li>
@@ -241,117 +255,117 @@
     <script src="assets/js/theme.js"></script>
 
     <script type="text/javascript">
-        $(function () {
+        // $(function () {
 
-            // jQuery Knobs
-            $(".knob").knob();
+        //     // jQuery Knobs
+        //     $(".knob").knob();
 
 
 
-            // jQuery UI Sliders
-            $(".slider-sample1").slider({
-                value: 100,
-                min: 1,
-                max: 500
-            });
-            $(".slider-sample2").slider({
-                range: "min",
-                value: 130,
-                min: 1,
-                max: 500
-            });
-            $(".slider-sample3").slider({
-                range: true,
-                min: 0,
-                max: 500,
-                values: [ 40, 170 ],
-            });
+        //     // jQuery UI Sliders
+        //     $(".slider-sample1").slider({
+        //         value: 100,
+        //         min: 1,
+        //         max: 500
+        //     });
+        //     $(".slider-sample2").slider({
+        //         range: "min",
+        //         value: 130,
+        //         min: 1,
+        //         max: 500
+        //     });
+        //     $(".slider-sample3").slider({
+        //         range: true,
+        //         min: 0,
+        //         max: 500,
+        //         values: [ 40, 170 ],
+        //     });
 
             
 
-            // jQuery Flot Chart
-            var visits = [[1, 50], [2, 40], [3, 45], [4, 23],[5, 55],[6, 65],[7, 61],[8, 70],[9, 65],[10, 75],[11, 57],[12, 59]];
-            var visitors = [[1, 25], [2, 50], [3, 23], [4, 48],[5, 38],[6, 40],[7, 47],[8, 55],[9, 43],[10,50],[11,47],[12, 39]];
+        //     // jQuery Flot Chart
+        //     var visits = [[1, 50], [2, 40], [3, 45], [4, 23],[5, 55],[6, 65],[7, 61],[8, 70],[9, 65],[10, 75],[11, 57],[12, 59]];
+        //     var visitors = [[1, 25], [2, 50], [3, 23], [4, 48],[5, 38],[6, 40],[7, 47],[8, 55],[9, 43],[10,50],[11,47],[12, 39]];
 
-            var plot = $.plot($("#statsChart"),
-                [ { data: visits, label: "注册量"},
-                 { data: visitors, label: "访客量" }], {
-                    series: {
-                        lines: { show: true,
-                                lineWidth: 1,
-                                fill: true, 
-                                fillColor: { colors: [ { opacity: 0.1 }, { opacity: 0.13 } ] }
-                             },
-                        points: { show: true, 
-                                 lineWidth: 2,
-                                 radius: 3
-                             },
-                        shadowSize: 0,
-                        stack: true
-                    },
-                    grid: { hoverable: true, 
-                           clickable: true, 
-                           tickColor: "#f9f9f9",
-                           borderWidth: 0
-                        },
-                    legend: {
-                            // show: false
-                            labelBoxBorderColor: "#fff"
-                        },  
-                    colors: ["#a7b5c5", "#30a0eb"],
-                    xaxis: {
-                        ticks: [[1, "一月"], [2, "二月"], [3, "三月"], [4,"四月"], [5,"五月"], [6,"六月"], 
-                               [7,"七月"], [8,"八月"], [9,"九月"], [10,"十月"], [11,"十一月"], [12,"十二月"]],
-                        font: {
-                            size: 12,
-                            family: "Open Sans, Arial",
-                            variant: "small-caps",
-                            color: "#697695"
-                        }
-                    },
-                    yaxis: {
-                        ticks:3, 
-                        tickDecimals: 0,
-                        font: {size:12, color: "#9da3a9"}
-                    }
-                 });
+        //     var plot = $.plot($("#statsChart"),
+        //         [ { data: visits, label: "注册量"},
+        //          { data: visitors, label: "访客量" }], {
+        //             series: {
+        //                 lines: { show: true,
+        //                         lineWidth: 1,
+        //                         fill: true, 
+        //                         fillColor: { colors: [ { opacity: 0.1 }, { opacity: 0.13 } ] }
+        //                      },
+        //                 points: { show: true, 
+        //                          lineWidth: 2,
+        //                          radius: 3
+        //                      },
+        //                 shadowSize: 0,
+        //                 stack: true
+        //             },
+        //             grid: { hoverable: true, 
+        //                    clickable: true, 
+        //                    tickColor: "#f9f9f9",
+        //                    borderWidth: 0
+        //                 },
+        //             legend: {
+        //                     // show: false
+        //                     labelBoxBorderColor: "#fff"
+        //                 },  
+        //             colors: ["#a7b5c5", "#30a0eb"],
+        //             xaxis: {
+        //                 ticks: [[1, "一月"], [2, "二月"], [3, "三月"], [4,"四月"], [5,"五月"], [6,"六月"], 
+        //                        [7,"七月"], [8,"八月"], [9,"九月"], [10,"十月"], [11,"十一月"], [12,"十二月"]],
+        //                 font: {
+        //                     size: 12,
+        //                     family: "Open Sans, Arial",
+        //                     variant: "small-caps",
+        //                     color: "#697695"
+        //                 }
+        //             },
+        //             yaxis: {
+        //                 ticks:3, 
+        //                 tickDecimals: 0,
+        //                 font: {size:12, color: "#9da3a9"}
+        //             }
+        //          });
 
-            function showTooltip(x, y, contents) {
-                $('<div id="tooltip">' + contents + '</div>').css( {
-                    position: 'absolute',
-                    display: 'none',
-                    top: y - 30,
-                    left: x - 50,
-                    color: "#fff",
-                    padding: '2px 5px',
-                    'border-radius': '6px',
-                    'background-color': '#000',
-                    opacity: 0.80
-                }).appendTo("body").fadeIn(200);
-            }
+        //     function showTooltip(x, y, contents) {
+        //         $('<div id="tooltip">' + contents + '</div>').css( {
+        //             position: 'absolute',
+        //             display: 'none',
+        //             top: y - 30,
+        //             left: x - 50,
+        //             color: "#fff",
+        //             padding: '2px 5px',
+        //             'border-radius': '6px',
+        //             'background-color': '#000',
+        //             opacity: 0.80
+        //         }).appendTo("body").fadeIn(200);
+        //     }
 
-            var previousPoint = null;
-            $("#statsChart").bind("plothover", function (event, pos, item) {
-                if (item) {
-                    if (previousPoint != item.dataIndex) {
-                        previousPoint = item.dataIndex;
+        //     var previousPoint = null;
+        //     $("#statsChart").bind("plothover", function (event, pos, item) {
+        //         if (item) {
+        //             if (previousPoint != item.dataIndex) {
+        //                 previousPoint = item.dataIndex;
 
-                        $("#tooltip").remove();
-                        var x = item.datapoint[0].toFixed(0),
-                            y = item.datapoint[1].toFixed(0);
+        //                 $("#tooltip").remove();
+        //                 var x = item.datapoint[0].toFixed(0),
+        //                     y = item.datapoint[1].toFixed(0);
 
-                        var month = item.series.xaxis.ticks[item.dataIndex].label;
+        //                 var month = item.series.xaxis.ticks[item.dataIndex].label;
 
-                        showTooltip(item.pageX, item.pageY,
-                                    item.series.label + " of " + month + ": " + y);
-                    }
-                }
-                else {
-                    $("#tooltip").remove();
-                    previousPoint = null;
-                }
-            });
-        });
+        //                 showTooltip(item.pageX, item.pageY,
+        //                             item.series.label + " of " + month + ": " + y);
+        //             }
+        //         }
+        //         else {
+        //             $("#tooltip").remove();
+        //             previousPoint = null;
+        //         }
+        //     });
+        // });
     </script>
 
 </body>

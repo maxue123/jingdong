@@ -6,6 +6,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use backend\models\Admin;
 
 /**
  * Site controller
@@ -22,11 +23,11 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'error','reset'],
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index','reset'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -96,5 +97,32 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+    public function actionReset(){
+        $this->layout = false;
+        $time = Yii::$app->request->get('timestamp');
+        $adminuser = Yii::$app->request->get('adminuser');
+        $token = Yii::$app->request->get('token');
+        $model = new Admin();
+        $myToken = $model->createToken($adminuser,$time);
+        if($token != $myToken){
+            $this->redirect(['public/login']);
+            Yii::$app->end();
+        }
+        if(time()-$time > 300 ){
+            $this->redirect(['public/login']);
+            Yii::$app->end();
+        }
+        if(Yii::$app->request->isPost){
+            $post = Yii::$app->request->post();
+            if($model->changePass($post)){
+                Yii::$app->session->setFlash('info','密码修改成功');
+            }           
+        }
+        $model->adminuser = $adminuser;
+        return $this->render('mailchangepass', [
+                'model' => $model,
+            ]);
+
     }
 }

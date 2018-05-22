@@ -43,6 +43,7 @@ class PublicController extends Controller
     	if(Yii::$app->request->isPost){
     		$post = Yii::$app->request->post();
     		if($model->seekPass($post)){
+
     			Yii::$app->session->setFlash('info','电子邮件发送成功');
     		}    		
     	}
