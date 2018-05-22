@@ -985,7 +985,7 @@
 
     <!-- For demo purposes – can be removed on production -->
     
-    <div class="config open">
+    <!-- <div class="config open">
         <div class="config-options">
             <h4>Pages</h4>
             <ul class="list-unstyled animate-dropdown">
@@ -1027,7 +1027,7 @@
             </ul>
         </div>
         <a class="show-theme-options" href="#"><i class="fa fa-wrench"></i></a>
-    </div>
+    </div> -->
     <!-- For demo purposes – can be removed on production : End -->
 
     <!-- JavaScripts placed at the end of the document so the pages load faster -->

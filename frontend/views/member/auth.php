@@ -6,8 +6,8 @@
 			
 			<div class="col-md-6">
 				<section class="section sign-in inner-right-xs">
-					<h2 class="bordered">Sign In</h2>
-					<p>Hello, Welcome to your account</p>
+					<h2 class="bordered">登录</h2>
+					<p>您好，欢迎使用您的帐户</p>
 
 					<div class="social-auth-buttons">
 						<div class="row">
@@ -22,7 +22,7 @@
 
 					<form role="form" class="login-form cf-style-1">
 						<div class="field-row">
-                            <label>Email</label>
+                            <label>电子邮件</label>
                             <input type="text" class="le-input">
                         </div><!-- /.field-row -->
 
@@ -50,12 +50,12 @@
 
 			<div class="col-md-6">
 				<section class="section register inner-left-xs">
-					<h2 class="bordered">Create New Account</h2>
-					<p>Create your own Media Center account</p>
+					<h2 class="bordered">建立新帐户</h2>
+					<p>创建您自己的Media Center帐户</p>
 
 					<form role="form" class="register-form cf-style-1">
 						<div class="field-row">
-                            <label>Email</label>
+                            <label>电子邮件</label>
                             <input type="text" class="le-input">
                         </div><!-- /.field-row -->
 
@@ -64,12 +64,12 @@
                         </div><!-- /.buttons-holder -->
 					</form>
 
-					<h2 class="semi-bold">Sign up today and you'll be able to :</h2>
+					<h2 class="semi-bold">今天注册并且您将能够：</h2>
 
 					<ul class="list-unstyled list-benefits">
-						<li><i class="fa fa-check primary-color"></i> Speed your way through the checkout</li>
-						<li><i class="fa fa-check primary-color"></i> Track your orders easily</li>
-						<li><i class="fa fa-check primary-color"></i> Keep a record of all your purchases</li>
+						<li><i class="fa fa-check primary-color"></i> 加快结账速度</li>
+						<li><i class="fa fa-check primary-color"></i> 轻松跟踪您的订单</li>
+						<li><i class="fa fa-check primary-color"></i> 记录您的所有购买情况</li>
 					</ul>
 
 				</section><!-- /.register -->
