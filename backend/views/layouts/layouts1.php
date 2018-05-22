@@ -203,6 +203,28 @@ use yii\helpers\Url;
             <li>
                 <a class="dropdown-toggle" href="#">
                     <i class="icon-edit"></i>
+                    <span>分类管理</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="<?php echo Url::to(['category/list']); ?>">分类列表</a></li>
+                    <li><a href="<?php echo Url::to(['category/add']); ?>">加入分类</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-gift"></i>
+                    <span>商品管理</span>   
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="<?php echo Url::to(['product/list']); ?>">商品列表</a></li>
+                    <li><a href="<?php echo Url::to(['product/add']); ?>">创建商品</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-edit"></i>
                     <span>表单</span>
                     <i class="icon-chevron-down"></i>
                 </a>

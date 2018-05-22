@@ -16,7 +16,7 @@ class MemberController extends Controller
     	if(Yii::$app->request->isPost){
     		$post = Yii::$app->request->post();
     		if($model->login($post)){
-    			Yii::$app->session->setFlash('info','登陆成功');
+                var_dump(Yii::$app->user->setReturnUrl(Yii::$app->request->referrer));die;
     			return $this->goBack(Yii::$app->request->referrer);
     		}    		
     	}

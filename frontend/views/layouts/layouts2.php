@@ -61,7 +61,7 @@ use yii\helpers\Url;
     <div class="container">
         <div class="col-xs-12 col-sm-6 no-margin">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="<?php echo Url::to(['index/index']); ?>">首页</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle"  data-toggle="dropdown" href="#change-colors">Change Colors</a>
 
@@ -121,7 +121,13 @@ use yii\helpers\Url;
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dollar (US)</a></li>
                     </ul>
                 </li>
-                <li><a href="<?php echo Url::to(['member/auth']); ?>">注册/登录</a></li>
+                <li>
+                <?php if(\Yii::$app->session['islogin'] == 1 ):?>
+                    <a href="#">您好,欢迎您回来 <?php echo \Yii::$app->session['loginname'];?></a>
+                <?php else:?>
+                    <a href="<?php echo Url::to(['member/auth']); ?>">注册/登录</a>
+                <?php endif;?>
+                </li>
             </ul>
         </div><!-- /.col -->
     </div><!-- /.container -->

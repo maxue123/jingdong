@@ -22,31 +22,27 @@
 							</div>
 						</div>
 					</div>
-					<form role="form" class="login-form cf-style-1">
-						<div class="field-row">
-                            <label>电子邮件</label>
-                            <input type="text" class="le-input">
-                        </div><!-- /.field-row -->
-
-                        <div class="field-row">
-                            <label>Password</label>
-                            <input type="text" class="le-input">
-                        </div><!-- /.field-row -->
-
-                        <div class="field-row clearfix">
-                        	<span class="pull-left">
-                        		<label class="content-color"><input type="checkbox" class="le-checbox auto-width inline"> <span class="bold">Remember me</span></label>
-                        	</span>
-                        	<span class="pull-right">
-                        		<a href="#" class="content-color bold">Forgotten Password ?</a>
-                        	</span>
-                        </div>
-
-                        <div class="buttons-holder">
-                            <button type="submit" class="le-button huge">Secure Sign In</button>
-                        </div><!-- /.buttons-holder -->
-					</form><!-- /.cf-style-1 -->
-
+					<?php
+					    $form = ActiveForm::begin([
+					        'options' => ['class' => 'login-form cf-style-1','role' => 'form',],
+					        'fieldConfig' => [
+					            'template' => '<div class="field-row">{label}{input}</div>{error}'
+					        ],
+					    ]);
+					?>
+					<?php echo $form->field($model, 'loginname')->textInput(['class' => 'le-input']); ?>
+					<?php echo $form->field($model, 'userpass')->passwordInput(['class' => 'le-input']); ?>
+					<div class="field-row clearfix">
+	                    <?php echo $form->field($model, 'rememberMe')->checkbox([
+	                        'template' => '<span class="pull-left"><label class="content-color">{input} <span class="bold">记住我</span></label></span>',
+	                        'class' => "le-checkbox auto-width inline",
+	                    ]); ?>
+                    	<span class="pull-right">
+                    		<a href="#" class="content-color bold">忘记密码 ?</a>
+                    	</span>
+                    </div>
+					<?php echo Html::submitButton('登录',["class"=>"le-button huge"]);?>
+					<?php $form = ActiveForm::end(); ?>
 				</section><!-- /.sign-in -->
 			</div><!-- /.col -->
 

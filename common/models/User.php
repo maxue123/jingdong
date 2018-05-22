@@ -110,8 +110,8 @@ class User extends \yii\db\ActiveRecord
             $session = Yii::$app->session;
             session_set_cookie_params($lifetime);
             $session['loginname'] = $this->loginname;
-            $session['isLogin'] = 1;
-            return (bool)$session['isLogin'];
+            $session['islogin'] = 1;
+            return (bool)$session['islogin'];
         }
         return false;
     }
