@@ -3,7 +3,7 @@ namespace backend\controllers;
 use Yii;
 use yii\web\Controller;
 use backend\models\Admin;
-use yii\data\pagination;
+use yii\data\Pagination;
 /**
  * Index controller
  * 首页
