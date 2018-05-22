@@ -11,6 +11,12 @@ class IndexController extends Controller
 	public $layout = "layouts1";
     public function actionIndex()
     {
+    	var_dump('1111');die;
+        return $this->render('index');
+    }
+    public function actionIndexl()
+    {
+    	var_dump('1111');die;
         return $this->render('index');
     }
 }
